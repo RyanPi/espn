@@ -16,7 +16,6 @@ print(top_headlines[0].text +": ")
 #get the headline text and print the text
 headlines = soup.select(".headlineStack__list li a")
 #use a simple incrementer for number formatting
-i=0
-for li in headlines:
-    i+=1
-    print(str(i) + ". " + li.text)
+
+for count,li in enumerate(headlines, start=1):
+    print(str(count) + ". " + li.text)
